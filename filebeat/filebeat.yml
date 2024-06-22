@@ -1,0 +1,10 @@
+filebeat.inputs:
+  - type: log
+    scan_frequency: 1s
+    json.keys_under_root: true
+    enabled: true
+    paths:
+      - /src/logs/*.json
+
+output.logstash:
+  hosts: ['logstash01:5044']
