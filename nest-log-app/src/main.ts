@@ -8,14 +8,14 @@ async function bootstrap() {
     logger: WinstonModule.createLogger({
       transports: [
         new winston.transports.File({
-          filename: 'logs/error.json',
+          filename: 'logs/error.log',
           level: 'error',
           format: winston.format.combine(
             winston.format.timestamp(),
             winston.format.json(),
           ),
         }),
-        new winston.transports.File({ filename: 'logs/combined.json' }),
+        new winston.transports.File({ filename: 'logs/combined.log' }),
         new winston.transports.Console({
           format: winston.format.combine(
             winston.format.timestamp(),
@@ -28,6 +28,6 @@ async function bootstrap() {
       ],
     }),
   });
-  await app.listen(3000);
+  await app.listen(3010);
 }
 bootstrap();

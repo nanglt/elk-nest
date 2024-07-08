@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nest-app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3010:3010'
+    volumes:
+      - ./logs:/app/logs

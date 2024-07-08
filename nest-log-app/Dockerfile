@@ -1,5 +1,7 @@
 FROM node:18
 
+EXPOSE 3010
+
 WORKDIR /app
 
 COPY package*.json ./
