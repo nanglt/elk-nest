@@ -33,4 +33,9 @@ export class AppController {
       'This is an internal server error exception',
     );
   }
+
+  @Get('render')
+  render(): void {
+    this.appService.render();
+  }
 }
