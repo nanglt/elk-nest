@@ -27,5 +27,5 @@ export class AppService {
     Logger.verbose('Verbose message');
 
     Logger.warn('Warning message');
-s  }
+  }
 }
